@@ -15,6 +15,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            padding: 10px;
         }
         header {
             background-color: #1a1a1a;
@@ -45,7 +46,8 @@
             color: #e63946; /* Red for emphasis */
         }
         img {
-            width: 800px;
+            width: 100%;
+            max-width: 768px;
             border-radius: 10px;
             border: 4px solid #333;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -64,6 +66,45 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.6em;
+            }
+            #countdown {
+                transform: scale(0.8);
+                font-size: 2em;
+                padding: 15px 30px;
+            }
+            img {
+                transform: scale(0.8);
+                margin-top: 20px;
+            }
+            .info {
+                font-size: 1em;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2em;
+            }
+            #countdown {
+                transform: scale(0.8);
+                font-size: 1.4em;
+                padding: 10px 20px;
+            }
+            img {
+                transform: scale(0.8);
+                margin-top: 20px;
+            }
+            .info {
+                font-size: 0.9em;
+                padding: 6px;
+            }
         }
     </style>
 </head>
